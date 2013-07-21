@@ -1,0 +1,38 @@
+<div class="content-container" >
+  		
+  		<div class="panel" id="messagePanel">
+  			<div class="panel-header clear-fix">{{trip.tripName}}
+  				
+  				<div class="dropdown btn-group  pull-right" >
+        <a class="btn dropdown-toggle btn-small  btn-info " data-toggle="dropdown" href="#">
+            Take Action
+            <span class="caret"></span>
+          </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li><a href="#/map/{{trip.tripId}}">Map Your Roadies</a></li>
+          <li><a href="#/jointrip">Join this Trip</a></li>
+          
+          <li class="divider"></li> 
+          <li><a href="#/roadtrips">Return to Trips</a></li>
+          
+        </ul>
+      </div>
+  			</div>
+  			<div class="panel-content">
+  				
+  				<ul id="tripdetails">
+  					<li>Description: {{trip.tripDescription}}</li>
+  					
+  					<li>Dates:{{trip.tripStartDate}} to {{trip.tripEndDate}}</li>
+  					<li>Roadies:
+  						<ul id="peopleList">
+  							<li ng-repeat="person in trip.people">
+  								{{person.name}}, {{person.phone}}, {{person.location}}
+  							</li>
+  						</ul>
+  						
+  					</li>
+  				</ul>
+  			</div>
+  		</div>
+  	</div>

@@ -25,7 +25,7 @@ body {
    			font-family: 'Sonsie One', cursive;
    			font-size:1.6em;
    		}
-   		.content-container {margin:85px auto 50px auto;
+   		.content-container {margin:105px auto 50px auto;
    			width:500px;}
 
    		.panel {
@@ -49,3 +49,5 @@ body {
    			margin:10px;
    			padding:0;
    		}
+
+         

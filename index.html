@@ -1,47 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="roadtripper">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
    <title>Road-Tripper</title>
    <link href='http://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet' type='text/css'>
+   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
    <link rel="stylesheet" type="text/css" href="css/main.css">
 
   </head>
   <body>
   <div class="header">
   	<h1>Road Tripper</h1>
-  </div>
-  
-  <div class="content-container">
-  		<div class="panel">
-  			<div class="panel-header">Say something</div>
-  			<div class="panel-content">
-  				<label>Name:</label><input type="text" id="name" />
-  				
-  				<label>Message:</label>
-  				<input type="text" id="message" />
-  				<button id="sendBtn">send</button>
-  			</div>
-  		</div>
-  		<div class="panel" id="messagePanel">
-  			<div class="panel-header">Road Trips</div>
-  			<div class="panel-content">
-  				<ul id="messageList">
+   </div>
+   
+   
+  <div ng-view></div>
 
-  				</ul>
-  			</div>
-  		</div>
-  	</div>
   
-  	<script src="https://cdn.firebase.com/v0/firebase.js"></script>
-    <script type='text/javascript'
-        src='https://cdn.firebase.com/v0/firebase-simple-login.js'>
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-
-     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-  	<script src="js/app.js"></script>
+  
+     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+   
+  	<script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
+    <script type="text/javascript" src="lib/ui-bootstrap-tpls-0.4.0.min.js"></script>
+    <script type="text/javascript" src="controllers/roadTripsCtrl.js"></script>
+    <script type="text/javascript" src="controllers/roadTripDetailCtrl.js"></script>
+  	<script type="text/javascript" src="js/app.js"></script>
 
   	<script>
   	
