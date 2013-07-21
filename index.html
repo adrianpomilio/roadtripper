@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <title>Road-Tripper</title>
+   <link href='http://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  </head>
+  <body>
+  <div class="header">
+  	<h1>Road Tripper</h1>
+  </div>
+  
+  <div class="content-container">
+  		<div class="panel">
+  			<div class="panel-header">Say something</div>
+  			<div class="panel-content">
+  				<label>Name:</label><input type="text" id="name" />
+  				
+  				<label>Message:</label>
+  				<input type="text" id="message" />
+  				<button id="sendBtn">send</button>
+  			</div>
+  		</div>
+  		<div class="panel" id="messagePanel">
+  			<div class="panel-header">Messages</div>
+  			<div class="panel-content">
+  				<ul id="messageList">
+
+  				</ul>
+  			</div>
+  		</div>
+  	</div>
+  
+  	<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  	
+
+  	<script>
+  	$( document ).ready(function() {
+  		// reference to my data at firebase 
+	      var myDataRef = new Firebase("https://road-tripper.firebaseio.com/");
+	      $('#sendBtn').click(function (e) {
+	          var name = $('#name').val();
+	          var text = $('#message').val();
+	          var d = new Date();
+	          var date = (d.getMonth() + 1) + "-" + d.getDate() + "-" + d.getFullYear()+ " " + d.getHours() + ":" + d.getMinutes()+ ":" + d.getSeconds();
+	          
+	          myDataRef.push({name: name, text: text, date : date, auctions: [{auction:'stuff'},{auction:'stuff'}]});
+	          $('#message').val('');
+	        
+	      });
+ 
+	      myDataRef.on('child_added', function(snapshot) {
+	        var message = snapshot.val();
+	        
+
+			$('#messageList').prepend('<li>'+message.name + ' - ' + message.text +'<br />'+ message.date +'</li>')
+	      });
+      });
+    </script>
+  </body>
+</html>
