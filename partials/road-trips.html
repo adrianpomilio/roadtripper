@@ -1,7 +1,23 @@
 <div class="content-container">
   		
   		<div class="panel" id="messagePanel">
-  			<div class="panel-header">Road Trips</div>
+  			<div class="panel-header">Road Trips
+  				<div class="dropdown btn-group  pull-right" >
+			        <a class="btn dropdown-toggle btn-small  btn-info " data-toggle="dropdown" href="#">
+			            Take Action
+			            <span class="caret"></span>
+			          </a>
+			        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+			          <li><a href="#/create-trip">Create a Trip</a></li>
+			          <li><a href="#/profile">Your Profile</a></li>
+			          
+			          <li class="divider"></li> 
+			          <li><a href="#/logout">Sign Out</a></li>
+			          
+			        </ul>
+			      </div>
+
+  			</div>
   			<div class="panel-content">
   				<ul id="tripList" >
   					<li ng-repeat="trip in roadTrips"><a href="#/trip/{{trip.tripId}}">{{trip.tripName}}</a></li>

@@ -1,7 +1,10 @@
-angular.module('roadtripper', ['ui.bootstrap']).
+angular.module('roadtripper', ['ui.bootstrap','firebase']).
   config(['$routeProvider', function($routeProvider) {
   $routeProvider.
-      when('/trips', {templateUrl: 'partials/road-trips.html', controller: RoadTripsCtrl}).
+  	  when('/trips', {templateUrl: 'partials/road-trips.html', controller: RoadTripsCtrl}).
+  	  when('/jointrip', {templateUrl: 'partials/create-person.html', controller: CreatePersonCtrl}).
+  	  when('/create-trip', {templateUrl: 'partials/create-person.html', controller: CreateTripCtrl}).
+      
       when('/trip/:tripId', {templateUrl: 'partials/road-trip-details.html', controller: RoadTripDetailCtrl}).
       otherwise({redirectTo: '/trips'});
 }]);
