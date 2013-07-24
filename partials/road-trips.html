@@ -20,7 +20,7 @@
   			</div>
   			<div class="panel-content">
   				<ul id="tripList" >
-  					<li ng-repeat="trip in roadTrips"><a href="#/trip/{{trip.tripId}}">{{trip.tripName}}</a></li>
+  					<li class="list-item" ng-repeat="trip in trips"><a href="#/trip/{{trip.$id}}">{{trip.tripName}}</a></li>
   				</ul>
   			</div>
   		</div>
