@@ -1,9 +1,10 @@
-function RoadTripDetailCtrl($scope, $routeParams, angularFire) {
-  var url = 'https://road-tripper.firebaseio.com/trips/'+$routeParams.tripId;
-  $scope.trip = angularFire(url, $scope, 'trip', {});
+'use strict';
 
-  
-  console.log($scope.trip)
-};
+roadtripper.controller('RoadTripDetailCtrl', 
+	function RoadTripDetailCtrl( $scope, $routeParams, angularFire ) {
+
+  		var url = 'https://road-tripper.firebaseio.com/trips/'+$routeParams.tripId;
+  		$scope.trip = angularFire( url, $scope, 'trip', {} );
+
+});
  
-RoadTripDetailCtrl.$inject = ['$scope', '$routeParams', 'angularFire'];
