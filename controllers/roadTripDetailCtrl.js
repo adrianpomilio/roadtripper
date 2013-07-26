@@ -37,7 +37,7 @@ roadtripper.controller('RoadTripDetailCtrl',
 				
 
 			});
-			console.log($scope)
+			
 			$scope.mapPerson = function(obj) {
 				
 				$scope.markersProperty = [{

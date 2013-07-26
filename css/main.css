@@ -9,6 +9,7 @@ body {
 }
 
 
+
  .header {position:fixed;
    				top:0;
    				left:0; 
@@ -50,5 +51,7 @@ body {
    			padding:0;
    		}
 
-         ul{list-style:none;}
+         ul{list-style:none; 
+         }
+         #tripdetails {margin-top:20px;}
          

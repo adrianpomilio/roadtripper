@@ -8,8 +8,9 @@
 			  	
   			</div>
   			<div class="panel-content">
-  				
+  				<button id="updateBtn" class=" btn  btn-success" ng-controller="CreatePersonCtrl" ng-click="updateLoc()">Update Your Location</button>
   				<ul id="tripdetails">
+
   					<li>Description: {{trip.tripDescription}}</li>
   					<li><a href="#map-canvas">View Map</a></li>
   					<li>Dates:{{trip.tripStartDate}} to {{trip.tripEndDate}}</li>
