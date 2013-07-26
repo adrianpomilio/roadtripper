@@ -22,17 +22,32 @@
   				
   				<ul id="tripdetails">
   					<li>Description: {{trip.tripDescription}}</li>
-  					
+  					<li><a href="#map">View Map</a></li>
   					<li>Dates:{{trip.tripStartDate}} to {{trip.tripEndDate}}</li>
   					<li>Roadies:
   						<ul id="peopleList">
   							<li ng-repeat="person in trip.people">
-  								{{person.name}}, {{person.phone}}, {{person.location}}
+  								{{person.name}}, {{person.phone}} - 
+                    <button class="btn btn-mini btn-success"
+                    ng-click="mapPerson(person)">map</button> 
   							</li>
   						</ul>
   						
   					</li>
   				</ul>
+          <div class="google-map" 
+            center="position.coords"
+            zoom="zoomProperty" 
+            markers="markersProperty"
+            latitude="clickedLatitudeProperty"
+            longitude="clickedLongitudeProperty"
+            
+            draggable="true"
+            fit="false"
+            events="eventsProperty"
+            style="height: 400px; width: 90%"
+            id="map-canvas">
+          </div>
   			</div>
   		</div>
   	</div>

@@ -1,6 +1,6 @@
 'use strict';
 
-var roadtripper = angular.module('roadtripper', ['ui.bootstrap','firebase']);
+var roadtripper = angular.module('roadtripper', ['ui.bootstrap','firebase','google-maps']);
 
 roadtripper.config(function($routeProvider) {
   $routeProvider.
