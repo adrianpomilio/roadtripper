@@ -20,13 +20,12 @@
   					<li><a href="#map-canvas">View Map</a></li>
   					<li>Dates:{{trip.tripStartDate}} to {{trip.tripEndDate}}</li>
   					<li>Roadies:
-  						<ul id="peopleList">
-  							<li ng-repeat="person in trip.people">
-  								{{person.name}}, {{person.phone}} - 
+  							<div ng-repeat="person in trip.people" class="well">
+  								{{person.name}}, <br /><a href="tel://{{person.phone}}">{{person.phone}}</a> - 
                     <button class="btn btn-mini btn-success"
                     ng-click="mapPerson(person)">map</button> 
-  							</li>
-  						</ul>
+  							</div>
+  						
   						
   					</li>
   				</ul>
