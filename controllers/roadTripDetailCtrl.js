@@ -6,7 +6,7 @@ roadtripper.controller('RoadTripDetailCtrl',
   		var url = 'https://road-tripper.firebaseio.com/trips/'+$routeParams.tripId;
   		$scope.trip = angularFire( url, $scope, 'trip', {} );
 
-  	 		google.maps.visualRefresh = true;
+  			google.maps.visualRefresh = true;
 
     		
 
@@ -35,6 +35,7 @@ roadtripper.controller('RoadTripDetailCtrl',
 					}],
 
 				
+  	 		
 
 			});
 			
@@ -44,7 +45,10 @@ roadtripper.controller('RoadTripDetailCtrl',
 						latitude: obj.currentlocation.lat,
 						longitude: obj.currentlocation.lon
 					}]
+			
 			}
+
+			
 
 });
  

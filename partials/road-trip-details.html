@@ -4,11 +4,16 @@
   			<div class="panel-header clear-fix">{{trip.tripName}}
   				      
                 <a href="#/roadtrips" class="btn btn-mini pull-right">Return to Trips</a>
-                <a href="#/jointrip"  class="btn btn-mini btn-success pull-right">Join this Trip</a>
+                <a href="#/jointrip"  class="btn btn-mini btn-success pull-right" 
+                ng-hide="personExists">Join this Trip</a>
 			  	
   			</div>
   			<div class="panel-content">
-  				<button id="updateBtn" class=" btn  btn-success" ng-controller="CreatePersonCtrl" ng-click="updateLoc()">Update Your Location</button>
+  				<button id="updateBtn" 
+          class=" btn  btn-success" 
+          ng-controller="CreatePersonCtrl" 
+          ng-click="updateLoc()"
+          ng-show="personExists">Update Your Location</button>
   				<ul id="tripdetails">
 
   					<li>Description: {{trip.tripDescription}}</li>
