@@ -2,27 +2,16 @@
   		
   		<div class="panel" id="messagePanel">
   			<div class="panel-header clear-fix">{{trip.tripName}}
-  				
-			  	<div class="dropdown btn-group  pull-right" >
-			        <a class="btn dropdown-toggle btn-small  btn-info " data-toggle="dropdown" href="#">
-			            Take Action
-			            <span class="caret"></span>
-			          </a>
-			        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-			          <li><a href="#/map/{{trip.tripId}}">Map Your Roadies</a></li>
-			          <li><a href="#/jointrip">Join this Trip</a></li>
-			          
-			          <li class="divider"></li> 
-			          <li><a href="#/roadtrips">Return to Trips</a></li>
-			          
-			        </ul>
-			      </div>
+  				      
+                <a href="#/roadtrips" class="btn btn-mini pull-right">Return to Trips</a>
+                <a href="#/jointrip"  class="btn btn-mini btn-success pull-right">Join this Trip</a>
+			  	
   			</div>
   			<div class="panel-content">
   				
   				<ul id="tripdetails">
   					<li>Description: {{trip.tripDescription}}</li>
-  					<li><a href="#map">View Map</a></li>
+  					<li><a href="#map-canvas">View Map</a></li>
   					<li>Dates:{{trip.tripStartDate}} to {{trip.tripEndDate}}</li>
   					<li>Roadies:
   						<ul id="peopleList">

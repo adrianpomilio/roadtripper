@@ -11,9 +11,6 @@ roadtripper.config(function($routeProvider) {
   	  when('/jointrip', {
   	  	templateUrl: 'partials/create-person.html', 
   	  	controller: 'CreatePersonCtrl'}).
-  	  when('/create-trip', {
-  	  	templateUrl: 'partials/create-person.html', 
-  	  	controller: 'CreateTripCtrl'}).  
   	  when('/trip/:tripId', {
   	  	templateUrl: 'partials/road-trip-details.html', 
   	  	controller: 'RoadTripDetailCtrl'}).
